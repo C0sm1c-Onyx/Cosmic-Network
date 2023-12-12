@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+</head>
+<body>
+    <h2>Post by {{ post.author }}:</h2><br>
+        {{ post.text }}<br>
+        <img src='{{ post.photo.url }}'><br>
+    {% if post.video %}
+        <video controls src="{{ post.video.url }}"></video><br>
+    {% endif %}
+    {% if post.audio %}
+        <audio controls src="{{ post.audio.url }}"></audio>
+    {% endif %}
+    <h2>Comments:</h2>
+    {% for c in comments %}
+        <p>{{ c.user }}<p>
+        <p>{{ c.text }}</p>
+        <p>{{ c.datetime }}</p>
+    {% if id1 == id2 %}
+        <a href="/id{{ id2 }}/delete_comment/{{ post.id }}/{{ c.id }}/">Delete</a>
+    {% endif %}
+    {% endfor %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,241 @@
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 60px;
+    position: absolute;
+    top: 100px;
+    box-shadow: 1px 4px 24px white;
+}
+
+
+.name {
+    position: absolute;
+    top: 80px;
+    left: 220px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.status {
+    position: absolute;
+    top: 190px;
+    left: 225px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.edit_status {
+    position: absolute;
+    top: 215px;
+    left: 225px;
+    font-family: Comic Sans MS;
+    color: black;
+    width: 120px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.is_online {
+    position: absolute;
+    top: 135px;
+    left: 247px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.online {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 152px;
+    left: 225px;
+    color: white;
+}
+
+
+.edit_profile {
+    position: absolute;
+    top: 242px;
+    left: 225px;
+    font-family: Comic Sans MS;
+    color: black;
+    width: 120px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.info {
+    position: absolute;
+    top: 300px;
+    font-family: Comic Sans MS;
+    color: white;
+    font-size: 18px;
+}
+
+
+.phone {
+    position: absolute;
+    top: 750px;
+    left: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.birthdate {
+    position: absolute;
+    top: 775px;
+    left: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.gender {
+    position: absolute;
+    top: 800px;
+    left: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.id {
+    position: absolute;
+    top: 825px;
+    left: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.reg_date {
+    position: absolute;
+    top: 850px;
+    left: 30px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.message {
+    position: absolute;
+    top: 260px;
+    left: 225px;
+    font-family: Comic Sans MS;
+    color: black;
+    background: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 25px;
+    text-align: center;
+
+}
+
+
+.subs {
+    position: absolute;
+    top: 350px;
+    font-family: Comic Sans MS;
+    color: black;
+    width: 120px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.title_user_info {
+    position: absolute;
+    top: 720px;
+    left: 10px;
+    font-family: Comic Sans MS;
+    color: white;
+}
+
+
+.scroll-area {
+    width: 500px;
+    height: 763px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4);
+    box-shadow: 1px 4px 24px white;
+}
+
+
+.scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.scroll-area::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(154, 154, 154, 1) 40%, rgba(154, 154, 154, 1) 50%, rgba(154, 154, 154, 1) 60%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+
+.scroll-area::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+
+.add_post {
+    position: absolute;
+    top: 275px;
+    left: 225px;
+    font-family: Comic Sans MS;
+    color: black;
+    width: 120px;
+    height: 25px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.wall {
+    position: absolute;
+    top: 53px;
+    right: 50px;
+    font-family: Comic Sans MS;
+    background: rgba(128, 128, 128, 0.4);
+    width: 500px;
+    height: 78px;
+    color: white;
+    box-shadow: 1px 4px 24px white;
+    text-align: center;
+}
+
+
+.bg_profile {
+    z-index: -2;
+    position: absolute;
+    width: 1239px;
+    height: 914px;
+    top: 0;
+    left: 0;
+}
+
+
+.help {
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    font-family: Comic Sans MS;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

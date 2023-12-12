@@ -1,0 +1,22 @@
+{% load static %}
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'app/css/index_style.css' %}" />
+</head>
+<body class="home_body">
+<header>
+    <img class="logo1" src="{% static 'app/image/logo2.png' %}" >
+    <h1 class="logo_name">COSMIC NETWORK</h1>
+    <nav>
+        <ul>
+            <li><a href='id{{ user_id }}'>Profile</a></li>
+            <li><a href="">Messages</a></li>
+            <li><a href="{% url 'home' %}">News</a></li>
+            <li><a href="{% url 'search_users' %}">Search</a></li>
+            <li><a class='l_cn' href="{% url 'logout_cn' %}">Logout</a></li>
+        </ul>
+     </nav>
+</header>
+</body>
+{% block content %}
+
+{% endblock %}

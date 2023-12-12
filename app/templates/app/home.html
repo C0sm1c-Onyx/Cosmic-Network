@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<body>
+    <ul class="navigate">
+    </ul>
+    {% for content in all_subs_post %}
+            <li>{{ content.author }}  <p>{{ content.datetime }}</p>
+            <p>{{ content.text }}</p>
+            {% if content.image %}
+                <p><img class="photos123" src="{{ content.image.url }}"></p>
+            {% endif %}
+            {% if content.video %}
+                <p><video controls src="{{ content.video.url }}" ></video></p>
+            {% endif %}
+            {% if content.music %}
+                <p><audio controls src="{{ content.music.url }}"></audio></li></p>
+            {% endif %}
+                <a href="id{{ content.author.id }}/like_news/{{ content.id }}/">Like</a>
+            <a href="/id{{ user_id }}/comments/{{ content.id }}">Comments</a>
+    {% endfor %}
+</body>
+{% endblock %}

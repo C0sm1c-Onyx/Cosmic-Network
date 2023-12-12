@@ -1,0 +1,125 @@
+.login_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+
+.login {
+    width: 300px;
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: Comic Sans MS;
+}
+
+
+.form_button {
+    font-family: Comic Sans MS;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.form_title {
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+    color: white;
+}
+
+
+.form_group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+
+.form_label {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    color: white;
+    transition: 0.3s;
+    left: 0;
+}
+
+
+.form_input {
+    font-family: Comic Sans MS;
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    color: white;
+}
+
+
+.form_input:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.form_button:focus,
+.form_button:hover {
+    background-color: rgba(0, 113, 240, 0.3);
+}
+
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~ .form_label {
+    top: -18px;
+    font-size: 12px;
+}
+
+
+.background_login {
+    z-index: -2;
+    position: absolute;
+    width: 1239px;
+    height: 916px;
+}
+
+
+.login_site_name {
+    font-family: Comic Sans MS;
+    color: white;
+    position: absolute;
+    bottom: 650px;
+    font-size: 50px;
+}
+
+
+.login_help {
+    font-family: Comic Sans MS;
+    color: white;
+    position: absolute;
+    bottom: 640px;
+}
+
+
+.reg_help {
+    font-family: Comic Sans MS;
+    color: white;
+    position: absolute;
+    bottom: 700px;
+}
+
+
+.reg_site_name {
+    font-family: Comic Sans MS;
+    color: white;
+    position: absolute;
+    bottom: 710px;
+    font-size: 50px;
+}
