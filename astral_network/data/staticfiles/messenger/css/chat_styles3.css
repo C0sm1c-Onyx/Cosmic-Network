@@ -1,0 +1,150 @@
+.messages {
+    height: 720px;
+    width: 500px;
+    position: fixed;
+    top: 16.4%;
+    left: 36.6%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4);
+    box-shadow: 1px 4px 24px white;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.messages::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(154, 154, 154, 1) 40%, rgba(154, 154, 154, 1) 50%, rgba(154, 154, 154, 1) 60%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+
+.messages::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+
+.send_text input {
+    position: absolute;
+    width: 420px;
+    height: 50px;
+    border-radius: 15px;
+    bottom: 2%;
+    left: 36.5%;
+}
+
+
+.send_text button {
+    position: absolute;
+    border-radius: 15px;
+    bottom: 2%;
+    left: 59.5%;
+    bottom: 2%;
+    width: 73px;
+    height: 55px;
+}
+
+
+.sender_photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin-left: auto;
+}
+
+
+.sender_name {
+    font-size: 20px;
+    margin-right: auto;
+    padding: 5px;
+}
+
+
+.right_info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 10px 0 10px;
+    width: 235px;
+    margin-left: auto;
+}
+
+
+.right_message {
+    position: relative;
+    align-items: center;
+    float: right;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: gray;
+    opacity: 0.3;
+    color: white;
+    margin: 5px 10px 5px 10px;
+    margin-top: 10px;
+    width: 235px;
+    word-wrap: break-word;
+}
+
+
+.left_info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0 10px;
+    width: 235px;
+}
+
+
+.left_message {
+    position: relative;
+    align-items: center;
+    float: left;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: gray;
+    opacity: 0.3;
+    color: white;
+    margin: 5px 10px 5px 10px;
+    width: 235px;
+    word-wrap: break-word;
+}
+
+
+.right_send_time {
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+    float: right;
+}
+
+
+.left_send_time {
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+    float: left;
+}
+
+
+.sender_message {
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+}
+
+
+.who {
+    position: absolute;
+    width: 500px;
+    height: 60px;
+    border-radius: 15px;
+    align-items: center;
+    left: 36.5%;
+    border: 1px solid black;
+    display: flex;
+    bottom: 85%;
+}

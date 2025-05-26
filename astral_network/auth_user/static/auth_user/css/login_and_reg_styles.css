@@ -1,0 +1,121 @@
+.login_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    background-color: black;
+}
+
+
+.login {
+    width: 300px;
+    padding: 32px;
+    font-family: Comic Sans MS;
+}
+
+
+.form_button {
+    font-family: Comic Sans MS;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 8px 32px #ccc;
+}
+
+
+.form_title {
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+    color: white;
+    opacity: 0.8;
+}
+
+
+.form_group {
+    position: relative;
+    margin-bottom: 18px;
+    color: white;
+}
+
+
+.form_label {
+    position: absolute;
+    top: 0;
+    z-index: -5;
+    color: white;
+    transition: 0.3s;
+    left: 0;
+}
+
+
+.form_input {
+    font-family: Comic Sans MS;
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    color: white;
+}
+
+
+.form_input:focus {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+
+.form_button:focus,
+.form_button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~ .form_label {
+    top: -18px;
+    font-size: 12px;
+    color: white;
+}
+
+
+.site_name {
+    font-family: Comic Sans MS;
+    color: white;
+    position: absolute;
+    bottom: 80%;
+    font-size: 50px;
+    opacity: 0.8;
+}
+
+
+.background_connect {
+    position: fixed;
+    z-index: -20;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px #ccc;
+}
+
+
+.background {
+    position: fixed;
+    z-index: -21;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px #ccc;
+}
+
+
+.to_reg {
+    color: white;
+}

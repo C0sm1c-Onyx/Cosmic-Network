@@ -1,0 +1,95 @@
+{% extends 'profile_user/header.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user_data.first_name }} {{ user_data.last_name }} - profile</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'profile_user/css/profile_styles1.css' %}" />
+</head>
+<body>
+    <div class="content">
+        <div class="user_profile">
+            {% if profile_data.photo %}
+                <img class="user_photo" src="{{ profile_data.photo.url }}">
+            {% else %}
+            <a href="/profile/id{{ user_data.id }}/edit_profile/"><button class="user_photo">Upload photo</button></a>
+            {% endif %}
+            <p class="user_name">{{ user_data.first_name }} {{ user_data.last_name }}</p>
+            {% if profile_data.status %}
+                <p class="user_status">{{ profile_data.status }}</p>
+            {% else %}
+            {% if user_data.id == watch_user_id %}
+                <a class="user_status" href="/profile/id{{ user_data.id }}/edit_profile/">add status</a>
+            {% endif %}
+            {% endif %}
+
+            {% if profile_data.birthdate %}
+                <p class="user_birthdate">
+                    birthdate:<br>
+                    {{ profile_data.birthdate }}
+                </p>
+            {% else %}
+                <p class="user_birthdate">
+                    birthdate:<br>
+                    not specified
+                </p>
+            {% endif %}
+            <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+        </div>
+        <div class="user_add_info">
+            <details>
+                <summary>additional information</summary>
+                <p>
+                    about yourself:<br>
+                    {% if profile_data.about_yourself %}
+                        {{ profile_data.about_yourself }}
+                    {% else %}
+                        not specified
+                    {% endif %}
+                </p>
+                <p>
+                    gender:<br>
+                    {% if profile_data.gender %}
+                        {{ profile_data.gender }}
+                    {% else %}
+                        not specified
+                    {% endif %}
+                </p>
+                {% if user_data.id == watch_user_id %}
+                    <a class="edit_profile_data" href="/profile/id{{ user_data.id }}/edit_profile/">edit profile data</a>
+                {% endif %}
+            </details>
+        </div>
+        <div class="choice_action">
+            {% if user_data.id != watch_user_id %}
+                {% if friend_code %}
+                <a class="in_btn" href="/profile/id{{ user_data.id }}/delete-friend/{{ friend_code }}"><button class="action">unfriend</button></a>
+                {% else %}
+                <a class="in_btn" href="/profile/id{{ user_data.id }}/add-friend/"><button class="action">add friend</button></a>
+                {% endif %}
+                <a href="/profile/id{{ user_data.id }}/pre-init-chat/" class="in_btn"><button class="action">send a message</button></a>
+            {% else %}
+                <button class="no_action"><p>Your profile</p></button>
+            {% endif %}
+        </div>
+        <div class="user_music">
+            {% if not user_musics %}
+            {% if user_data.id == watch_user_id %}
+            <h2 class="help">Your music will appear here</h2>
+            {% endif %}
+            {% endif %}
+            {% for music_data in user_musics %}
+                <p>{{ music_data.author }} - {{ music_data.title }}</p>
+                <audio class="user_audio" controls src="{{ music_data.music.url }}"></audio>
+            {% endfor %}
+        </div>
+        {% if user_data.id == watch_user_id %}
+            <a href="/profile/id{{ user_data.id }}/add_music/"><button class="add_music">add music</button></a>
+        {% endif %}
+    </div>
+</body>
+</html>
+{% endblock %}

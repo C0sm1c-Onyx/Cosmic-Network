@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'profile_user/css/header_styles4.css' %}" />
+</head>
+<body class="home_body">
+<header>
+    <img class="logo" src="{% static 'profile_user/img/logo.png' %}" >
+    <h1 class="logo_name">Astral Network</h1>
+    <nav>
+        <img class="bg_header" src="{% static 'profile_user/img/header_bg.jpg' %}">
+        {% if is_auth %}
+        <ul class="success_ul">
+            <li class="elem"><a href='/profile/id{{ request_user_id }}/'>Profile</a></li>
+            <li class="elem">
+                <details id="myDetails">
+                    <summary class="summary"><a href="{% url 'friends' %}">Friends</a></summary>
+                    <a href="{% url 'requests' %}">Friend requests</a>
+                </details>
+                <script>
+                  const details = document.getElementById('myDetails');
+
+                  details.addEventListener('mouseenter', () => {
+                    details.setAttribute('open', '');
+                  });
+
+                  details.addEventListener('mouseleave', () => {
+                    details.removeAttribute('open');
+                  });
+                </script>
+            </li>
+            <li class="elem"><a href="{% url 'messages' %}">Messages</a></li>
+            <li class="elem"><a href="{% url 'search' %}">Search</a></li>
+            <li><a class='l_cn' href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        {% else %}
+        <ul class="auth_ul">
+            <li class='auth'><a href="{% url 'register' %}">Register</a></li>
+            <li class='auth'><a href="{% url 'login' %}">Log in</a></li>
+        </ul>
+        {% endif %}
+     </nav>
+</header>
+<div class="horizon1">
+    <img src="{% static 'profile_user/img/horizon.png' %}">
+</div>
+<div class="horizon2">
+    <img src="{% static 'profile_user/img/horizon.png' %}">
+</div>
+</body>
+</html>
+{% block content %}
+
+{% endblock %}

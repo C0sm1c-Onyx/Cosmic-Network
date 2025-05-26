@@ -1,0 +1,37 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friends</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'interaction_core/css/friends_styles1.css' %}" />
+</head>
+<body>
+<div class="friends">
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+    {% if user_friend_list %}
+    <div class="content">
+        {% for f, p in user_friend_list %}
+        <div>
+            <img class="friend_photo" src="{{ p.photo.url }}">
+            <p class="friend_name">{{ f.first_name }} {{ f.last_name }}</p>
+            <a class="button_friend" href="/profile/id{{ f.id }}/">
+                <button>profile</button>
+            </a>
+            <a class="button_friend" href="/profile/id{{ f.id }}/pre-init-chat/">
+                <button>message</button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <h3 class="not_friends">You don't have any friends</h3>
+    {% endif %}
+</div>
+</body>
+</html>
+{% endblock %}

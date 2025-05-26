@@ -1,0 +1,41 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'interaction_core/css/search_styles1.css' %}" />
+</head>
+<body>
+<div class="users">
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+    <div class="content">
+        {% for user, p in user_list %}
+        <div class="">
+            <img class="friend_photo" src="{{ p.photo.url }}">
+            <p class="friend_name">{{ user.first_name }} {{ user.last_name }}</p>
+            <a class="button_friend" href="/profile/id{{ user.id }}/">
+                <button>profile</button>
+            </a>
+            {% if user.id != request_user_id %}
+            <a class="button_friend" href="/profile/id{{ user.id }}/pre-init-chat/">
+                <button>message</button>
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="search">
+    <form role="search" method="get">
+        <input type="search" name="search" placeholder="search firstname, lastname or code">
+        <button type="submit">find</button>
+    </form>
+</div>
+</body>
+</html>
+{% endblock %}

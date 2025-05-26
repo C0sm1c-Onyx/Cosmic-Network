@@ -1,0 +1,29 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'messenger/css/messages_styles3.css' %}" />
+</head>
+<body>
+<div class="messages">
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+    <div class="content">
+        {% for request_f, p in user_friend_request %}
+        <div>
+
+        </div>
+        {% endfor %}
+    </div>
+    {% if not messages %}
+        <h3 class="not_messages">You don't have any messages yet</h3>
+    {% endif %}
+</div>
+</body>
+</html>
+{% endblock %}

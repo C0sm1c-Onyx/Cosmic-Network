@@ -1,0 +1,14 @@
+.friends {
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 870px;
+    width: 500px;
+    box-shadow: 0 8px 32px #ccc;
+    top: 8%;
+    left: 36.6%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

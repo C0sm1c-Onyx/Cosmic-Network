@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'auth_user/css/login_and_reg_styles.css' %}" />
+</head>
+<body class="login_body">
+<h1 class="site_name">Astral Network</h1>
+
+<form class='login' method="post">
+    <h1 class="form_title">Register</h1>
+    {% csrf_token %}
+    <div class="form_group">
+        <input class="form_input" placeholder=" " {{ form.first_name }}
+        <label class="form_label">First name</label>
+    </div>
+    <div class="form_group">
+        <input class="form_input" placeholder=" " {{ form.last_name }}
+        <label class="form_label">Last name</label>
+    </div>
+    <div class="form_group">
+        <input class="form_input" placeholder=" " {{ form.email }}
+        <label class="form_label">E-mail</label>
+    </div>
+    <div class="form_group">
+        <input class="form_input" placeholder=" " {{ form.password1 }}
+        <label class="form_label">Password</label>
+    </div>
+    <div class="form_group">
+        <input class="form_input" placeholder=" " {{ form.password2 }}
+        <label class="form_label">Repeat password</label>
+    </div>
+    <button class='form_button' type="submit">Create</button>
+</form>
+<img class="background_connect" src="{% static 'auth_user/img/astral_connect.jpg' %}">
+<img class="background" src="{% static 'auth_user/img/background.jpg' %}">
+</body>
+</html>

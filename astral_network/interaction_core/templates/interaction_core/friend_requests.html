@@ -1,0 +1,36 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend requests</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'interaction_core/css/friend_requests_styles3.css' %}" />
+</head>
+<body>
+<div class="requests_friend">
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+    <div class="content">
+        {% for request_f, p in user_friend_request %}
+        <div>
+            <img class="friend_photo" src="{{ p.photo.url }}">
+            <p class="friend_name">{{ request_f.user.first_name }} {{ request_f.user.last_name }}</p>
+            <a class="a_choice" href="/friends/requests/accept/{{ request_f.friend_unique_code }}/">
+                <button class="b_choice">accept</button>
+            </a>
+            <a class="a_choice" href="/friends/requests/reject/{{ request_f.friend_unique_code }}/">
+                <button class="b_choice">reject</button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    {% if not user_friend_request %}
+        <h3 class="not_friends">You don't have any friend requests</h3>
+    {% endif %}
+</div>
+</body>
+</html>
+{% endblock %}

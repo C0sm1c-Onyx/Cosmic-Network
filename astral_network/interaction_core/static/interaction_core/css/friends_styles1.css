@@ -1,0 +1,107 @@
+body {
+    background: black;
+}
+
+
+.friends {
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 870px;
+    width: 500px;
+    box-shadow: 0 8px 32px #ccc;
+    top: 8%;
+    left: 36.6%;
+    z-index: 1;
+}
+
+
+.center_img {
+    border-radius: 50px;
+}
+
+
+.content {
+    width: 440px;
+    height: 810px;
+    position: fixed;
+    top: 10%;
+    left: 37.7%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4);
+    box-shadow: 1px 4px 24px white;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.content::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(154, 154, 154, 1) 40%, rgba(154, 154, 154, 1) 50%, rgba(154, 154, 154, 1) 60%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+
+.content::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+
+.friend_photo {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    float: left;
+}
+
+
+.friend_name {
+    float: left;
+    color: white;
+}
+
+
+.button_friend button {
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    float: right;
+}
+
+
+.button_friend {
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    padding: 10px 1px 1px 10px;
+    float: right;
+}
+
+
+.content div {
+    width: 400px;
+    height: 75px;
+}
+
+
+.content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.not_friends {
+    position: absolute;
+    top: 45%;
+    left: 18%;
+}

@@ -1,0 +1,44 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'profile_user/css/edit_profile_data_styles3.css' %}" />
+</head>
+<body>
+<div class="edit_profile">
+    <form class='edit' method="post" enctype="multipart/form-data">
+        <h2 class="form_title">Edit profile data</h2>
+        {% csrf_token %}
+        <div class="form_group">
+            <label class="form_label" for="{{ form.photo.id_for_label }}">photo</label>{{ form.photo }}
+            <p>{{ form.photo.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.birthdate.id_for_label }}">birthdate</label>{{ form.birthdate }}
+            <p>{{ form.birthdate.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.about_yourself.id_for_label }}">about yourself</label>{{ form.about_yourself }}
+            <p>{{ form.about_yourself.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.status.id_for_label }}">status</label>{{ form.status }}
+            <p>{{ form.status.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.gender.id_for_label }}">gender</label>{{ form.gender }}
+            <p>{{ form.gender.errors }}</p>
+        </div>
+        <button class='form_button' type="submit">Update</button>
+    </form>
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+</div>
+</body>
+</html>
+{% endblock %}

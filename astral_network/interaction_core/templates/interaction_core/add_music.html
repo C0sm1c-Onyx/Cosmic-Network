@@ -1,0 +1,36 @@
+{% extends 'profile_user/header.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Music</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'interaction_core/css/add_music_styles1.css' %}" />
+</head>
+<body>
+<div class="add_music">
+    <form class='add_music_form' method="post" enctype="multipart/form-data">
+        <h2 class="form_title">Add info music</h2>
+        {% csrf_token %}
+        <div class="form_group">
+            <label class="form_label" for="{{ form.author.id_for_label }}">author</label>{{ form.author }}
+            <p>{{ form.author.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.title.id_for_label }}">title</label>{{ form.title }}
+            <p>{{ form.title.errors }}</p>
+        </div>
+        <div class="form_group">
+            <label class="form_label" for="{{ form.music.id_for_label }}">music</label>{{ form.music }}
+            <p>{{ form.music.errors }}</p>
+        </div>
+        <button class='form_button' type="submit">Add</button>
+    </form>
+    <img class="center_img" src="{% static 'profile_user/img/center.png' %}">
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,184 @@
+.user_photo {
+    position: fixed;
+    left: 38.5%;
+    top: 10%;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.user_name {
+    position: fixed;
+    font-size: 27px;
+    left: 51.5%;
+    top: 8%;
+    color: white;
+}
+
+
+.user_status {
+    position: fixed;
+    font-size: 18px;
+    left: 51.5%;
+    top: 15%;
+    width: 200px;
+    word-wrap: break-word;
+    color: white;
+}
+
+
+.user_birthdate {
+    position: fixed;
+    font-size: 18px;
+    left: 51.5%;
+    top: 20%;
+    color: white;
+}
+
+
+.user_add_info {
+    position: fixed;
+    font-size: 18px;
+    left: 51.5%;
+    top: 28%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 190px;
+    color: white;
+    z-index: 200;
+    word-wrap: break-word;
+}
+
+
+.choice_action {
+    position: fixed;
+    left: 38.5%;
+    top: 35%;
+    z-index: 1;
+}
+
+
+.action {
+    width: 215px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: black;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+
+.user_music {
+    width: 435px;
+    height: 450px;
+    position: fixed;
+    top: 45%;
+    left: 38.5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.4);
+    box-shadow: 1px 4px 24px white;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+
+.user_music::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.user_music::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(154, 154, 154, 1) 40%, rgba(154, 154, 154, 1) 50%, rgba(154, 154, 154, 1) 60%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+
+.user_music::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+
+.help {
+    position: absolute;
+    top: 43%;
+    left: 14%;
+    font-family: Comic Sans MS;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.add_music {
+    width: 435px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.no_action {
+    width: 435px;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.add_music {
+    position: fixed;
+    width: 435px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: black;
+    font-size: 18px;
+    z-index: 1;
+    bottom: 5%;
+    left: 38.5%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+
+.user_profile {
+    position: fixed;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 870px;
+    width: 500px;
+    box-shadow: 0 8px 32px #ccc;
+    top: 8%;
+    z-index: 1;
+}
+
+
+.user_profile .center_img {
+    border-radius: 50px;
+}
+
+
+body {
+    background: black;
+}
+
+
+a {
+    color: white;
+}
